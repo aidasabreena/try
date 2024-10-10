@@ -6,7 +6,7 @@
 
 # COMMAND ----------
 
-#dbutils.library.restartPython()
+dbutils.library.restartPython()
 
 # COMMAND ----------
 
@@ -22,7 +22,6 @@ from bs4 import BeautifulSoup
 
 # COMMAND ----------
 
-#
 storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="accesskey-adls-adlskotaksakti1")
 
 # COMMAND ----------
