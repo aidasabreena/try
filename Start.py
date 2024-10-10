@@ -29,27 +29,25 @@ storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="ai
 
 # COMMAND ----------
 
-url = "https://bms.pekab40.com.my/provider/index?page={}&per-page=10"  
-
+url = "https://bms.pekab40.com.my/provider/index?page={}&per-page=10"
+all_rows = []
 for i in range(1,469):
- response = requests.get(url)
- soup = BeautifulSoup(response.content, "lxml")
-#    Scrape data from the page
-# url = "https://bms.pekab40.com.my/provider/index?page={}&per-page=10" 
-# https://bms.pekab40.com.my/provider/index?page={}&per-page=10
-# https://open.dosm.gov.my/data-catalogue/births_annual?visual=table
-rows = soup.find("table", class_="table").find_all("tr")[2:]
-print(rows)
+    response = requests.get(url.format(i))
+    soup = BeautifulSoup(response.content, "lxml")
+    rows = soup.find("table", class_="table").find_all("tr")[2:]
+    all_rows.extend(rows)
+    print(f"Page {i}: {len(rows)} rows found")
+#scrape data from all pages, and then for every rows found in every page, it will merge all to all_rows
+
 
 # COMMAND ----------
 
 data = []
-for row in rows:
-    row_data = [cell.text for cell in row.find_all("td")]
+for row in all_rows:
+    row_data = [cell.text.strip() for cell in row.find_all("td")]
     data.append(row_data)
-print(data)
-
-#data = [p.table for p in soup.find_all("p")]
+print(len(data))
+# finds all td elements from the pages, and then for every td element, it will find the text and then strip the whitespace, and put the elements to a list. This will collect and clean the test data from each cell in every row found across all pages.
 
 # COMMAND ----------
 
@@ -78,8 +76,13 @@ df.show()
 
 # COMMAND ----------
 
-output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/try/pekab40ALL.csv"
+output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv"
 
 # COMMAND ----------
 
-df.write.mode("overwrite").parquet(output_folder_path)
+df.write.format("csv").option("inferSchema", "true").option("header", "true").save(output_folder_path)
+#df.write.mode("overwrite").parquet(output_folder_path)
+
+# COMMAND ----------
+
+display(df)

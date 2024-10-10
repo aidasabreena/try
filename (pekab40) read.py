@@ -26,12 +26,12 @@ spark.conf.set("fs.azure.account.key.aidaadls.dfs.core.windows.net", storage_acc
 df = (spark.read
       .option("header", "true")
       .option("inferSchema", "true")
-      .option("delimiter", "|")
-      .csv("abfss://try@aidaadls.dfs.core.windows.net/try/pekab40ALL.csv")
-#      .csv("abfss://try@aidaadls.dfs.core.windows.net/pekaB40/PEKAb40_clinic_data_test.csv")
+      .option("delimiter", ",")
+      .option("encoding", "UTF-8")
+      .csv("abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv")
       )
 #read data from dataset dalam blob
 
 # COMMAND ----------
 
-df.show(10)
+display(df)

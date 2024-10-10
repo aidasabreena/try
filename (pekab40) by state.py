@@ -27,13 +27,14 @@ df = (spark.read
       .option("header", "true")
       .option("inferSchema", "true")
       .option("delimiter", ",")
-      .csv("abfss://try@aidaadls.dfs.core.windows.net/pekaB40/PEKAb40_clinic_data_test.csv")
+      .option("encoding", "UTF-8")
+      .csv("abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv")
       )
 #read data from dataset dalam blob
 
 # COMMAND ----------
 
-df.show(1)
+df.show(20)
 
 # COMMAND ----------
 
@@ -43,11 +44,29 @@ df.describe().toPandas()
 # COMMAND ----------
 
 #shows the count of peka clinics from each state in the DataFrame. 
-df.groupBy("State").count().show()
+df_state = df.groupBy("State").count()
+df_state.show()
 
 # COMMAND ----------
 
-# df.select(countDistinct("Marital_Status")).show() creates a new DataFrame containing only one column. This column holds the count of distinct values in the "Marital_Status" column of the original DataFrame df.
+output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekaB40bystate"
+
+# COMMAND ----------
 
 # Write the DataFrame to a Parquet file
-# df.write.mode("overwrite").parquet(output_folder_path)
+df_state.write.mode("overwrite").parquet(output_folder_path)
+
+# COMMAND ----------
+
+import matplotlib.pyplot as plt
+
+# Create a sample DataFrame
+df = df_state.toPandas()
+# Create a line plot
+plt.plot(df['State'], df['count'])
+plt.xlabel('State')
+plt.ylabel('Count')
+plt.title('PekaB40 Clinics By State')
+
+# Display the plot in Databricks
+display(plt)
