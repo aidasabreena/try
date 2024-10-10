@@ -1,18 +1,18 @@
 # Databricks notebook source
-#%pip install tqdm
-#%pip install bs4
-#%pip install playwright
-#%pip install lxml
-
-import re
-import time
-import random
-from concurrent.futures import ThreadPoolExecutor
-from functools import lru_cache
-from tqdm import tqdm
-import pandas as pd
-import requests
-from bs4 import BeautifulSoup
+# MAGIC %pip install tqdm
+# MAGIC %pip install bs4
+# MAGIC %pip install playwright
+# MAGIC %pip install lxml
+# MAGIC
+# MAGIC import re
+# MAGIC import time
+# MAGIC import random
+# MAGIC from concurrent.futures import ThreadPoolExecutor
+# MAGIC from functools import lru_cache
+# MAGIC from tqdm import tqdm
+# MAGIC import pandas as pd
+# MAGIC import requests
+# MAGIC from bs4 import BeautifulSoup
 
 # COMMAND ----------
 
