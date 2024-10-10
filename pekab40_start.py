@@ -3,16 +3,22 @@
 # MAGIC %pip install bs4
 # MAGIC %pip install playwright
 # MAGIC %pip install lxml
-# MAGIC
-# MAGIC import re
-# MAGIC import time
-# MAGIC import random
-# MAGIC from concurrent.futures import ThreadPoolExecutor
-# MAGIC from functools import lru_cache
-# MAGIC from tqdm import tqdm
-# MAGIC import pandas as pd
-# MAGIC import requests
-# MAGIC from bs4 import BeautifulSoup
+
+# COMMAND ----------
+
+#dbutils.library.restartPython()
+
+# COMMAND ----------
+
+import re
+import time
+import random
+from concurrent.futures import ThreadPoolExecutor
+from functools import lru_cache
+# from tqdm import tqdm
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 
 # COMMAND ----------
 
@@ -22,10 +28,6 @@ storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="ac
 # COMMAND ----------
 
 storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="aidaadls-key-no-peeking")
-
-# COMMAND ----------
-
-#dbutils.library.restartPython()
 
 # COMMAND ----------
 
