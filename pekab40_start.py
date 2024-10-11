@@ -13,12 +13,10 @@ dbutils.library.restartPython()
 import re
 import time
 import random
-from concurrent.futures import ThreadPoolExecutor
-from functools import lru_cache
-# from tqdm import tqdm
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from datetime import date
 
 # COMMAND ----------
 
@@ -77,7 +75,11 @@ df.show()
 
 # COMMAND ----------
 
-output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv"
+today= date.today()
+
+# COMMAND ----------
+
+output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/pekab40ALL{today}"
 
 # COMMAND ----------
 

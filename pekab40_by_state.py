@@ -9,11 +9,6 @@ import io
 
 # COMMAND ----------
 
-#ni kalau ambil campaign_csv
-storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="accesskey-adls-adlskotaksakti1")
-
-# COMMAND ----------
-
 #ni to access whatever thats in my own blob
 storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="aidaadls-key-no-peeking")
 
@@ -23,18 +18,23 @@ spark.conf.set("fs.azure.account.key.aidaadls.dfs.core.windows.net", storage_acc
 
 # COMMAND ----------
 
+today=date.today()
+
+cleaned_output = f"abfss://try@aidaadls.dfs.core.windows.net/pekab40ALL{today}"
+print(cleaned_output)
+
+# COMMAND ----------
+
 df = (spark.read
-      .option("header", "true")
-      .option("inferSchema", "true")
-      .option("delimiter", ",")
-      .option("encoding", "UTF-8")
-      .csv("abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv")
+      .option('header', 'true')
+      .option('inferSchema', 'true')
+      .csv(cleaned_output)
       )
 #read data from dataset dalam blob
 
 # COMMAND ----------
 
-df.show(20)
+df.show()
 
 # COMMAND ----------
 
@@ -49,12 +49,14 @@ df_state.show()
 
 # COMMAND ----------
 
-output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekaB40bystate"
+today= date.today()
+output_folder_path = f"abfss://try@aidaadls.dfs.core.windows.net/pekab40bystate{today}"
 
 # COMMAND ----------
 
 # Write the DataFrame to a Parquet file
 df_state.write.mode("overwrite").parquet(output_folder_path)
+#df_state.write.format("csv").option("inferSchema", "true").option("header", "true").save(output_folder_path)
 
 # COMMAND ----------
 

@@ -6,11 +6,8 @@ import pandas as pd
 import numpy as np
 from datetime import date
 import io
+from pyspark.sql.utils import AnalysisException
 
-# COMMAND ----------
-
-#ni kalau ambil campaign_csv
-storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="accesskey-adls-adlskotaksakti1")
 
 # COMMAND ----------
 
@@ -23,14 +20,18 @@ spark.conf.set("fs.azure.account.key.aidaadls.dfs.core.windows.net", storage_acc
 
 # COMMAND ----------
 
+today=date.today()
+
+cleaned_output = f"abfss://try@aidaadls.dfs.core.windows.net/pekab40ALL{today}"
+print(cleaned_output)
+
+# COMMAND ----------
+
 df = (spark.read
-      .option("header", "true")
-      .option("inferSchema", "true")
-      .option("delimiter", ",")
-      .option("encoding", "UTF-8")
-      .csv("abfss://try@aidaadls.dfs.core.windows.net/tryagain/pekab40ALL.csv")
+      .option('header', 'true')
+      .option('inferSchema', 'true')
+      .csv(cleaned_output)
       )
-#read data from dataset dalam blob
 
 # COMMAND ----------
 
