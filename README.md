@@ -23,4 +23,4 @@ This project analyzes the distribution of clinics aimed at B40 families in Malay
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aidasabreena/pekaB40.git
+   git clone https://github.com/aidasabreena/try.git
