@@ -29,12 +29,12 @@ storage_account_key = dbutils.secrets.get(scope="kotak-sakti-scope-111", key="ai
 
 url = "https://bms.pekab40.com.my/provider/index?page={}&per-page=10"
 all_rows = []
+time.sleep(random.uniform(1, 3))
 for i in range(1,469):
     response = requests.get(url.format(i))
     soup = BeautifulSoup(response.content, "lxml")
     rows = soup.find("table", class_="table").find_all("tr")[2:]
     all_rows.extend(rows)
-    time.sleep(random.uniform(1, 3))
     print(f"Page {i}: {len(rows)} rows found")
 #scrape data from all pages, and then for every rows found in every page, it will merge all to all_rows
 
