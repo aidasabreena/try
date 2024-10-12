@@ -13,7 +13,6 @@ dbutils.library.restartPython()
 import re
 import time
 import random
-import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from datetime import date
@@ -35,6 +34,7 @@ for i in range(1,469):
     soup = BeautifulSoup(response.content, "lxml")
     rows = soup.find("table", class_="table").find_all("tr")[2:]
     all_rows.extend(rows)
+    time.sleep(random.uniform(1, 3))
     print(f"Page {i}: {len(rows)} rows found")
 #scrape data from all pages, and then for every rows found in every page, it will merge all to all_rows
 
