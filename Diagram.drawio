@@ -16,8 +16,20 @@
         <mxCell id="Oy91BMbdsR6l8gMQrDBX-2" value="DOSM data" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="150" y="260" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-3" value="Data processing (cleaning)" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="410" y="160" width="190" height="170" as="geometry" />
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-3" target="Oy91BMbdsR6l8gMQrDBX-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-3" value="Data processing" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450" y="190" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-7" target="Oy91BMbdsR6l8gMQrDBX-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-7" value="Exploratory Data Analysis" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="650" y="190" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-9" value="Simple Linear Regression" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="840" y="190" width="150" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
