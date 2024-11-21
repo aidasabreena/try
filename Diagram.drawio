@@ -1,35 +1,35 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0.1 Safari/605.1.15" version="24.8.3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15" version="24.8.6">
   <diagram name="Page-1" id="c7488fd3-1785-93aa-aadb-54a6760d102a">
     <mxGraphModel dx="954" dy="552" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-1" target="Oy91BMbdsR6l8gMQrDBX-3">
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Oy91BMbdsR6l8gMQrDBX-3" target="Oy91BMbdsR6l8gMQrDBX-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-1" value="PekaB40 website" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="150" y="160" width="160" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-2" target="Oy91BMbdsR6l8gMQrDBX-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-2" value="DOSM data" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="150" y="260" width="160" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-3" target="Oy91BMbdsR6l8gMQrDBX-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-3" value="Data processing" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-3" value="Data processing" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="450" y="190" width="150" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Oy91BMbdsR6l8gMQrDBX-7" target="Oy91BMbdsR6l8gMQrDBX-9">
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Oy91BMbdsR6l8gMQrDBX-7" target="Oy91BMbdsR6l8gMQrDBX-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-7" value="Exploratory Data Analysis" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-7" value="Exploratory Data Analysis" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="650" y="190" width="150" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Oy91BMbdsR6l8gMQrDBX-9" value="Simple Linear Regression" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="Oy91BMbdsR6l8gMQrDBX-9" value="Simple Linear Regression" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="840" y="190" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="PHQ4FlLOUyfz3ZYeWsEY-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://protecthealth.com.my/wp-content/uploads/2021/06/PeKa-B40-Logo-01-e1624009908386-1024x576.png;" vertex="1" parent="1">
+          <mxGeometry x="140" y="110" width="162.22" height="91.25" as="geometry" />
+        </mxCell>
+        <mxCell id="PHQ4FlLOUyfz3ZYeWsEY-2" value="PeKaB40 clinics data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="190" width="88.89" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="PHQ4FlLOUyfz3ZYeWsEY-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://open.dosm.gov.my/static/images/og_en-GB.png;clipPath=inset(18.35% 7% 19.62% 6.33%);" vertex="1" parent="1">
+          <mxGeometry x="111.11" y="227.08" width="220" height="82.92307692307693" as="geometry" />
+        </mxCell>
+        <mxCell id="PHQ4FlLOUyfz3ZYeWsEY-4" value="Malaysia Household Income &amp;amp; Poverty Rate Data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="145.56" y="320" width="151.11" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
